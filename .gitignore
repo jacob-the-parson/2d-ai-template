@@ -14,7 +14,7 @@ Frontend/node_modules/
 Thumbs.db
 
 # Ignore compiled cache files (if any)
-Frontend/js/logger.js.map
+Frontend/js/logger.js
 
 # Ignore any other potential build artifacts or temp files
 dist/
