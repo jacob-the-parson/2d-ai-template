@@ -1,0 +1,82 @@
+<div class="flex justify-center items-center h-screen bg-black">
+  <!-- Outer container div that centers everything on the screen -->
+  <div class="p-4 border-4 border-white rounded-lg bg-gray-800">
+    <!-- Inner container div with rounded borders and padding -->
+    <canvas class="rounded-lg" width="1024" height="576"></canvas>
+  </div>
+</div>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  
+  <style>
+    * {
+      font-family: 'Press Start 2P', cursive;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+
+<!-- Character Dialogue Box -->
+<!-- Character Dialogue Box -->
+<div
+  id="characterDialogueBox"
+  style="
+    background-color: white;
+    height: 140px; /* Keep this height */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 4px black solid;
+    display: none;
+    padding: 12px;
+    overflow-y: auto; /* Add this to enable vertical scrolling */
+    font-size: 14px; /* You can adjust this if needed */
+  "
+></div>
+
+
+<!-- Scripts -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+  integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+  integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script src="data/audio.js"></script>
+<script src="data/collisions.js"></script>
+<script src="data/characters.js"></script>
+<script src="js/utils.js"></script>
+<script src="classes.js"></script>
+<script src="index.js"></script>

@@ -1,0 +1,24 @@
+# Ignore .env files
+.env
+/Backend/.env
+
+# Ignore node_modules directories
+node_modules/
+/Backend/node_modules/
+/Frontend/node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore operating system files (common ones)
+.DS_Store
+Thumbs.db
+
+# Ignore compiled cache files (if any)
+/Frontend/js/logger.js.map
+
+# Ignore any other potential build artifacts or temp files
+dist/
+build/
+tmp/
+*.tmp

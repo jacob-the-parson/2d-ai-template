@@ -1,0 +1,33 @@
+{
+  "2d-ai-template": {
+    "Backend": {
+      "api": {
+        "openai": {
+          "index.mjs": {},
+          "placeholderAPI": {}
+        }
+      },
+      "node_modules": {},
+      ".env": {},
+      "index.js": {},
+      "package-lock.json": {},
+      "package.json": {}
+    },
+    "Frontend": {
+      "audio": {},
+      "data": {
+        "audio.js": {},
+        "characters.js": {},
+        "collisions.js": {}
+      },
+      "img": {},
+      "js": {
+        "utils.js": {}
+      },
+      ".prettierrc": {},
+      "classes.js": {},
+      "index.html": {},
+      "index.js": {}
+    }
+  }
+}
