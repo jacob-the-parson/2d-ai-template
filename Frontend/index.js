@@ -75,7 +75,6 @@ charactersMap.forEach((row, i) => {
   });
 });
 
-
 // Load images for player and background
 const image = new Image();
 image.src = './img/Pellet Town.png';
@@ -149,7 +148,6 @@ function animate() {
     renderable.draw();
   });
 
-  let moving = true;
   player.animate = false;
 
   let moveX = 0;
@@ -204,6 +202,10 @@ function animate() {
     player,
     characterOffset: { x: moveX, y: moveY }
   });
+
+  if (characterCollision.collision) {
+    console.log(`Collision with character: ${characterCollision.character}`);
+  }
 
   // Move map if not collided
   if (!collided && !characterCollision.collision) {
@@ -275,7 +277,7 @@ window.addEventListener('keydown', (e) => {
       console.log('Old man image:', oldManImg);
 
       // Check if interacting with the old man by comparing image sources
-if (player.interactionAsset.image.src === oldManImg.src) {
+      if (player.interactionAsset.image.src === oldManImg.src) {
         console.log('Interacting with the old man');
         if (player.interactionAsset.dialogue.length === 0) {
           fetchNPCResponse("What wisdom do you have to share?")
@@ -315,7 +317,6 @@ if (player.interactionAsset.image.src === oldManImg.src) {
   }
 });
 
-
 // Add keyup event listener to reset key states
 window.addEventListener('keyup', (e) => {
   switch (e.key) {
@@ -325,5 +326,22 @@ window.addEventListener('keyup', (e) => {
     case 'd':
       keys[e.key].pressed = false;
       break;
+  }
+});
+
+// Wait for user interaction to unlock the AudioContext
+window.addEventListener('click', () => {
+  if (Howler.ctx && Howler.ctx.state === 'suspended') {
+    Howler.ctx.resume().then(() => {
+      console.log('AudioContext resumed after user interaction.');
+    });
+  }
+});
+
+window.addEventListener('keydown', () => {
+  if (Howler.ctx && Howler.ctx.state === 'suspended') {
+    Howler.ctx.resume().then(() => {
+      console.log('AudioContext resumed after user interaction.');
+    });
   }
 });
